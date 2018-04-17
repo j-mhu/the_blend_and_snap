@@ -81,22 +81,22 @@ namespace Utility {
                 i1++;
             } else if (x == 2) {
                 while (datais >> n) {
-                    base[i2][j++] = n;
+                    valid[i2][j++] = n;
                 }
                 i2++;
             } else if (x == 3) {
                 while (datais >> n) {
-                    base[i3][j++] = n;
+                    hidden[i3][j++] = n;
                 }
                 i3++;
             } else if (x == 4) {
                 while (datais >> n) {
-                    base[i4][j++] = n;
+                    probe[i4][j++] = n;
                 }
                 i4++;
             } else if (x == 5) {
                 while (datais >> n) {
-                    base[i5][j++] = n;
+                    qual[i5][j++] = n;
                 }
                 i5++;
             }
