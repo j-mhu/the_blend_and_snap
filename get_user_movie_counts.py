@@ -1,4 +1,6 @@
 import numpy as np
+from sys import platform
+import os
 def get_user_movie_counts():
     """ Gets the user and movie counts needed to calculate
     user and movie biases over the entire
@@ -14,6 +16,16 @@ def get_user_movie_counts():
 
     user_counts = np.zeros(458293, dtype=np.int64)
     movie_counts = np.zeros(17770, dtype=np.int64)
+
+    if platform != "win32":
+        all_file_path = "../um/all.dta"
+        user_counts_path = "../um/user_counts.dta"
+        movie_counts_path = "../um/movie_counts.dta"
+
+    else:
+        all_file_path = "../data/um/all.dta"
+        user_counts_path = "../data/um/user_counts.dta"
+        movie_counts_path = "../data/um/movie_counts.dta"
 
     print("Starting biases...")
     with open("../um/all.dta", "r") as all_um, \
