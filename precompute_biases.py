@@ -13,9 +13,9 @@ def precompute_biases():
 
         ratings = np.zeros((N_USERS, N_MOVIES), dtype=np.int64)
 
-        movie_biases = np.zeros(N_MOVIES)
-        user_biases = np.zeros(N_USERS)
-        factor = np.zeros(N_USERS)
+        movie_biases = np.zeros(N_MOVIES, dtype=np.float64)
+        user_biases = np.zeros(N_USERS, dtype=np.float64)
+        factor = np.zeros(N_USERS, dtype=np.float64)
 
         print("Filling in sparse and movie_bias matrix")
         for d, line in enumerate(base):
