@@ -12,13 +12,13 @@ def get_user_movie_counts():
              elements are the # users who rated the movie on that line
     """
 
-    user_counts = np.zeros(458293, dtype=np.int8)
-    movie_counts = np.zeros(17770, dtype=np.int8)
+    user_counts = np.zeros(458293, dtype=np.int64)
+    movie_counts = np.zeros(17770, dtype=np.int64)
 
     print("Starting biases...")
     with open("../um/all.dta", "r") as all_um, \
-    open("../um/user_counts.dta", "w") as ub, \
-    open("../um/movie_counts.dta", "w") as mb:
+    open("user_counts.dta", "w") as ub, \
+    open("movie_counts.dta", "w") as mb:
         print("Loading file all.dta in user-movie order")
 
         print("Getting frequencies")
